@@ -1,0 +1,80 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage{geometry}
+\geometry{left=2 cm,right=2cm, top=3cm, bottom=2cm}
+\usepackage{currvita} 
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\title{PSEINT ALGORITMO  POTENCIACION }
+\date{28 de julio 2020}
+\setlength{\parskip}{0.1cm}
+\pagestyle{empty}
+
+\begin{document}
+\maketitle
+
+ \begin{cvlist}{Autor}
+	\item[Nombre completo]  JOSE MANUEL DIAZ POSADA
+	\item[Código]201960133 
+	\item[Programa Academico]TECNOLOGIA EN ELCTRONICA 
+	\item[Correo electrónico] jose.manuel.diaz@correounivalle.edu.co
+\end{cvlist}
+
+Para este informe realice un algoritmo en pseint, se mostrara toda su estrutura que lo compone y se realizar la prueba de escritorio y  mostrare Un diagrama de flujo ya que se puede apreciar de manera más visual el procesamiento que realiza la compilacion y el paso a paso de ejecución, este utiliza  figuras geometricas para hacerse más interactivo
+\begin{verbatim}
+
+Algoritmo de potencia
+
+     SubProceso  resultado <- Potencia (base, exponente)
+               Si exponente=0 Entonces
+             resultado <- 1;
+                sino 
+                resultado <- base*Potencia(base,exponente-1); 
+                     FinSi
+       FinSubProceso
+
+           Proceso sabernumeroelevado 
+     Escribir "Ingrese Base"
+         Leer base
+    Escribir "Ingrese Exponente"
+    Leer exponente
+         Escribir "El resultado es ",Potencia(base,exponente)
+   FinProceso
+
+se pudo observar la estrutura del codigo .
+\end{verbatim}
+el siguiente paso  le daremos correr al codigo para ver si funciona adecuadamente.
+como se muestra en la figura 1 es correcto el algoritmo.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=17cm, height=7.5cm]{jos.jpg}
+\caption{proceso compilacion}
+\label{Figura: 1}
+\end{figure}
+
+\begin{figure}[h!] 
+\centering
+\includegraphics[width=17cm, height=7.5cm]{diagra.jpg} 
+\caption{Diagrama de flujo}
+\label{Figura: 2}
+\end{figure}
+
+\textrm {se puede observar el diagrama deflujo es un metodo universal para entender un codigo no importa el idioma con el diagrama lo podemos entender de una manera mas agradable y nos ayuda a ver como esta echo el codigo .}
+
+ podemos concluir con la prueba de escritorio  y deducir que nuestro algoritmo
+funciona correctamente y cumple adecuadamente con el diagrama de frujo.
+
+\begin{figure}[h!] 
+\centering
+\includegraphics[width=17cm, height=9.5cm]{prueba.jpg} 
+\caption{prueba de escritorio}
+\label{Figura: 3}
+\end{figure}
+
+
+
+
+
+
+\end{document}

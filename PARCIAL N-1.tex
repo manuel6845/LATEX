@@ -1,0 +1,211 @@
+\documentclass[ twoside,twocolumn,9pt, letterpape]{article}
+\usepackage{geometry}
+\geometry{left=2 cm,right=2cm, top=3cm, bottom=2cm, top=2.5cm}
+\usepackage{currvita} 
+\usepackage[utf8]{inputenc}% para sacar las tildes y Ñ
+\usepackage{graphicx}%ingresar imagen
+\usepackage{amssymb} %para utilizar signos
+\usepackage{lastpage} %ultima pagina
+\usepackage{enumitem}
+\date{} %para que no aparesca la fecha
+\setlength{\parskip}{0.01cm}% espacio ente texto y texto
+\usepackage{fancyhdr}
+\pagestyle{fancy}%%%%%%%%%%% ENCABEZADO
+\fancyhead{}
+\fancyhead[c]{PARCIAL I}
+\fancyfoot{}%%%%%%%%%%%%%%% PIE DE PAGINA
+\fancyfoot[R]{\thepage}
+
+\title{\huge\textbf{informe parcial n-1}}
+\author{
+jose manuel diaz posada\\
+201960133-2710\\
+jose.manuel.diaz@correounivalle.edu.co\\
+}
+
+\renewcommand{\thesection}{\Roman{section}}% mayuculas numeracion en romano
+\renewcommand{\thesubsection}{\roman{subsection}}% minusculas numeracion en romano
+
+\begin{document}
+\maketitle
+\small %tamaño de la fuente
+\begin{abstract} —This report is based on the answer sheet of the partial number 1, where you can see the previous knowledge of the virtual keys of the academic program algorithm and programming.
+\end{abstract}
+%% \noindent\rule{16.8cm}{0.4pt} para que aparesca una linea
+\\
+\noindent
+\begin{enumerate}
+\item Consulte un Diagrama de Flujo donde se muestre un código que utilice un menú (el equivalente a SWITCH  en C) y una estructura de bucle para iteraciones bien sea WHILE, DO-WHILE o FOR. 
+
+\begin{enumerate}
+\item   Realice el pseudocódigo respectivo
+\item  Codifique en lenguaje C, el pseudocódigo anterior 
+\end{enumerate}    
+R/
+\item el siguiente codigo que voy a mostrar fue el utilizado para realizar el punto 1 , utilice el comando swicth y Do-While.
+
+
+\begin{verbatim}
+
+int main() {
+    int opcion;
+	char temp[10];
+
+ do {
+ 	printf("1) numero telefonico  yenni");
+ 	printf(" : opcion 1\n");
+ 	
+ 	printf("2)  numero telefonico profesor algoritmia");
+ 	printf(" :opcion  2\n");
+ 	
+ 	printf("3)  numero telefonico  armando");
+ 	printf(" :opcion  3\n");
+ 	
+ 	printf("4)  salir\n");
+ 	fgets(temp,10,stdin);
+ 	opcion= atoi(temp);
+ 	//leer
+ 	 switch(opcion) {
+ 	 	case 1:
+ 	 		printf(" el numero es 3128922067 1\n ",opcion);
+ 	 	break;
+ 	 	case 2:
+ 	 		printf(" el numero es 3194865154  2\n",opcion);
+ 	 	break;
+ 	 	case 3:
+ 	 		printf(" el numero es 31684597851 3\n",opcion);
+ 	 	break;	
+ 	    case 4:
+ 	    break;
+ 	 	default:
+ 	 		printf("opcion incorrecta\n");	
+ 	 	break;
+ 	 	
+ 	 }
+ 	    
+}while (opcion!= 4);
+
+}
+
+\end{verbatim}
+
+\begin{figure}[h!]
+\centering 
+\includegraphics[width=0.7\linewidth]{psein 1.jpg}
+\caption{diagrama de flujo de c a psein con Swicth y Bucle DO WHILE}
+\label{Figura: 1}
+\end{figure}
+
+
+\item Se tiene el  código en lenguaje C que el ingeniero P. Angarita explicó en clase.
+ Recuerde que es la codificación del método de Newton (a veces llamado Newton - Raphson ). Obtenga el {\it Diagrama de Flujo de dicho código}
+
+R/
+
+\begin{figure}[h!]
+\centering 
+\includegraphics[width=0.7\linewidth]{2.jpg}
+\caption{ Código en lenguaje C Realizado por el ingeniero P. Angarita
+punto 3}
+\label{imagen : 2 punto 3}
+\end{figure}
+
+\begin{figure}[h!]
+\centering 
+\includegraphics[width=0.6\linewidth]{3.jpg}
+\caption{ Diagrama de flujos del Código en lenguaje C Realizado por el ingeniero P. Angarita
+punto 3}
+\label{imagen: 3 punto 3}
+\end{figure}
+
+\item Se deja caer una piedra en un pozo con altura  $ h_{k}$ y se escucha que tocó el fondo, a los $t_k$ segundos de haberse soltado la piedra.  {\it Repetido}
+
+\begin{enumerate}
+\item Calcular la altura $t_{k}$ si $h_{k}= 5s$
+\item  Codifique en lenguaje C, el pseudocódigo anterior 
+\end{enumerate}
+
+\item se puede obserrvar el punto de realizar la   ecuacion.
+
+\begin{figure}[h!]
+\centering 
+\includegraphics[width=0.7\linewidth]{punto 3.jpg}
+\caption{ codigo de ecuacion punto 4 }
+\label{imagen: 4- punto 4}
+\end{figure}
+
+
+
+\item Consulte a los compañeros que realizaron la {\it tarea de manejo de archivos en C }, y realice un código que guarde los valores de altura ($h_{k}$ , $t_{k}$ ) en una arreglo vertical en un archivo de texto plano, del lejercicio anterior (Problema \# 3).\\
+
+
+\item con el siguiente codigo es el uyilizado para guardar los datos del punto 3
+
+\begin{verbatim}
+
+
+#include<iostream>
+#include<stdlib.h>
+#include<fstream> 
+
+using namespace std;
+void escribir();
+
+int main(){
+	
+	escribir();
+	system("pause");
+	
+	return 0 ;
+}
+
+void escribir(){
+	
+	ofstream archivo; 
+	string nombreArchivo,frase; 
+	
+	cout<<"Digite el nombre del archivo:";
+	getline(cin,nombreArchivo);
+	archivo.open(nombreArchivo.c_str(),ios::out);  
+	if(archivo.fail()){   
+		
+       cout<<"no se puede abrir el archivo";
+       exit(1);
+	}
+	
+   cout<<"\n-Dígite el texto que quiere ingresar:";
+   getline(cin,frase);
+   
+   archivo<<frase;
+   archivo.close(); 
+}
+
+\end{verbatim}
+
+\item El siguiente es un codigo para recompilar los datos de la ecuación del sonido y crear un archivo con el se mostrara en la siguiente imagen.
+
+\begin{figure}[h!]
+\centering 
+\includegraphics[width=0.7\linewidth]{22.jpg}
+\caption{ codigo datos de la ecuacion punto 4}
+\label{imagen: 6}
+\end{figure}
+
+
+
+\item Aplique el código en lenguaje C para obtener la inversa de  alguna matriz importante de su carrera. Para los electrónicos, puede emplear el ejecutable de inversa de una matriz para obtener la inversa de una matriz de coeficientes resistivos en un circuito de 3 mallas Para los industriales, puede empleaer una matriz . {\it Tarea de clase y avisado}\\
+
+
+\item mostrare el codigo fuente de la matrix inversa y su compilacion 
+
+\begin{figure}[h!]
+\centering 
+\includegraphics[width=0.7\linewidth]{ma 2.jpg}
+\caption{ matrix inversa }
+\label{imagen: 7}
+\end{figure}
+
+\end{enumerate}
+
+
+\end{document}
